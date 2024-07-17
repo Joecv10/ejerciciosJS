@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios Otros</title>
+    <link
+      rel="stylesheet"
+      href="../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../../node_modules/tachyons/css/tachyons.min.css"
+    />
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="pv3 ph2 relative bb">
+      <div id="container" class="flex justify-between items-center">
+        <div id="logo" class="overflow-hidden">
+          <a href="../../index.otros.html" class="link color-inherit"
+            >Lista de Ejercicios</a
+          >
+        </div>
+
+        <nav id="main-nav" class="dn db-l">
+          <a
+            href="../programaVoz/ejercicio1.html"
+            class="link dib-l pa2 pv2 color-inherit"
+            >Programa de Voz</a
+          >
+          <a
+            href="../cadenas/ejercicio2.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Cadenas</a
+          >
+          <a
+            href="../libreriaRandom/ejercicio3.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Libreria Random</a
+          >
+          <a
+            href="../codigoMorse/ejercicio4.html"
+            class="link db dib-l pa2 pv2 white bg-dark-gray"
+            >Código Morse</a
+          >
+          <a
+            href="../tiendaViveres/ejercicio5.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Tienda Víveres
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Card -->
+    <article class="mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+      <div class="tc">
+        <img
+          src="../../../../../assets/img/ejerciciosOtros/morse.jpeg"
+          class="br-100 h3 w3 dib"
+          title="Poste de luz"
+        />
+        <h1 class="f4">Ejercicio 4</h1>
+        <hr class="mw3 bb bw1 b--black-10" />
+      </div>
+      <p class="lh-copy measure center f6 black-70">
+        Leer una cadena y transformar a código Morse o viceversa.
+      </p>
+      <div class="tc">
+        <button
+          type="button"
+          class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Resolver
+        </button>
+      </div>
+    </article>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Ejercicio 4</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Selector de opción -->
+            <div class="measure">
+              <label for="conversion-type" class="f6 b db mb2"
+                >Seleccione una opción:</label
+              >
+              <select
+                id="conversion-type"
+                class="input-reset ba b--black-20 pa2 mb2 db w-100"
+              >
+                <option value="text-to-morse">De Texto a Morse</option>
+                <option value="morse-to-text">De Morse a Texto</option>
+              </select>
+            </div>
+            <!-- input cadena recorrido -->
+            <div class="measure">
+              <label for="texto" class="f6 b db mb2">Ingresar el texto</label>
+              <input
+                id="texto"
+                class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                type="text"
+                aria-describedby="name-desc"
+                placeholder="Ingresar Texto"
+              />
+              <small id="texto-desc" class="f6 black-60 db mb2"
+                >Este campo no puede estar vacío.</small
+              >
+              <small
+                id="error-message"
+                class="f6 error db mb2"
+                style="display: none"
+                >Entrada inválida</small
+              >
+            </div>
+            <!-- button calcular valores -->
+            <button
+              id="calcular"
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+              style="display: none"
+            >
+              Mostrar mensaje
+            </button>
+            <br />
+            <!-- Para mostrar el resultado -->
+            <label for="resultado" class="f6 b db mb2">Resultado:</label>
+            <br />
+            <p id="resultado" class="f6 b db mb2"></p>
+            <br />
+            <!-- boton limpiar campos -->
+            <button
+              id="limpiar"
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+            >
+              Limpiar Campos
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin Modal -->
+    <script src="../../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./index.ejercicio4.js"></script>
+  </body>
+</html>

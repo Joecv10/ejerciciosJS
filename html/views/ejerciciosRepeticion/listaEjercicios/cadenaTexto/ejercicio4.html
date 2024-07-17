@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios Repetición</title>
+    <link
+      rel="stylesheet"
+      href="../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../../node_modules/tachyons/css/tachyons.min.css"
+    />
+  </head>
+  <body>
+    <header class="pv3 ph2 relative bb">
+      <div id="container" class="flex justify-between items-center">
+        <div id="logo" class="overflow-hidden">
+          <a href="../../index.repeticion.html" class="link color-inherit"
+            >Lista de Ejercicios</a
+          >
+        </div>
+
+        <nav id="main-nav" class="dn db-l">
+          <a
+            href="../propiedadNumeros/ejercicio1.html"
+            class="link dib-l pa2 pv2 color-inherit"
+            >Propiedad Curiosa</a
+          >
+          <a
+            href="../numerosNaturales/ejercicio2.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Números Naturales</a
+          >
+          <a
+            href="../serieFibo/ejercicio3.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Serie Fibonacci</a
+          >
+          <a
+            href="../cadenaTexto/ejercicio4.html"
+            class="link db dib-l pa2 pv2 white bg-dark-gray"
+            >Cadenas de Texto</a
+          >
+          <!-- <a
+            href="../edadPersona/ejercicio5.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Edad Personas
+          </a> -->
+        </nav>
+      </div>
+    </header>
+
+    <!-- Card -->
+    <article class="mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+      <div class="tc">
+        <img
+          src="../../../../../assets/img/ejerciciosRepeticion/string.jpeg"
+          class="br-100 h3 w3 dib"
+          title="Poste de luz"
+        />
+        <h1 class="f4">Ejercicio 4</h1>
+        <hr class="mw3 bb bw1 b--black-10" />
+      </div>
+      <p class="lh-copy measure center f6 black-70">
+        Realizar un programa en JS para leer cadenas de texto hasta que se
+        introduzca la cadena vacía o mientras que el número de vocales sea menor
+        que 50. Al finalizar se debe de mostrar el número de caracteres
+        introducidos y el número de vocales. En el caso de que el usuario
+        introduzca una palabra menor a tres caracteres, no se debe procesar y se
+        llevará cuenta del número de palabras de este tipo introducidas. Al
+        finalizar se debe de mostrar el número de palabras menor de tres
+        caracteres introducidas e imprimir la cadena total leida al reves.
+      </p>
+      <div class="tc">
+        <button
+          type="button"
+          class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Resolver
+        </button>
+      </div>
+    </article>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Ejercicio 4</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- input ingreso cadena -->
+            <div class="measure">
+              <label for="cadena" class="f6 b db mb2">Ingresar la cadena</label>
+              <textarea
+                id="cadena"
+                class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                aria-describedby="name-desc"
+                placeholder="cadena"
+              ></textarea>
+              <small id="cadena-desc" class="f6 black-60 db mb2"
+                >La cadena de texto no puede estar vacia.</small
+              >
+            </div>
+
+            <!-- button calcular valores -->
+            <button
+              id="calcular"
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+            >
+              Mostrar resultados
+            </button>
+            <br />
+            <!-- Para mostrar el resultado -->
+            <label for="resultado" class="f6 b db mb2">Resultado:</label>
+            <br />
+            <p id="resultado" class="f6 b db mb2"></p>
+            <br />
+            <!-- boton limpiar campos -->
+            <button
+              id="limpiar"
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+            >
+              Limpiar Campos
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin Modal -->
+    <script src="../../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./index.ejercicio4.js"></script>
+  </body>
+</html>

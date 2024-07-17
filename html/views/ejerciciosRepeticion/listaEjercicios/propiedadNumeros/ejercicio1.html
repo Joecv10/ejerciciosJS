@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios Repetición</title>
+    <link
+      rel="stylesheet"
+      href="../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../../node_modules/tachyons/css/tachyons.min.css"
+    />
+  </head>
+  <body>
+    <header class="pv3 ph2 relative bb">
+      <div id="container" class="flex justify-between items-center">
+        <div id="logo" class="overflow-hidden">
+          <a href="../../index.repeticion.html" class="link color-inherit"
+            >Lista de Ejercicios</a
+          >
+        </div>
+
+        <nav id="main-nav" class="dn db-l">
+          <a
+            href="../propiedadNumeros/ejercicio1.html"
+            class="link dib-l pa2 pv2 white bg-dark-gray"
+            >Propiedad Curiosa</a
+          >
+          <a
+            href="../numerosNaturales/ejercicio2.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Números Naturales</a
+          >
+          <a
+            href="../serieFibo/ejercicio3.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Serie Fibonacci</a
+          >
+          <a
+            href="../cadenaTexto/ejercicio4.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Cadenas de Texto</a
+          >
+          <!-- <a
+            href="../edadPersona/ejercicio5.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Edad Personas
+          </a> -->
+        </nav>
+      </div>
+    </header>
+
+    <!-- Card -->
+    <article class="mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+      <div class="tc">
+        <img
+          src="../../../../../assets/img/ejerciciosRepeticion/propiedad.jpeg"
+          class="br-100 h3 w3 dib"
+          title="Poste de luz"
+        />
+        <h1 class="f4">Ejercicio 1</h1>
+        <hr class="mw3 bb bw1 b--black-10" />
+      </div>
+      <p class="lh-copy measure center f6 black-70">
+        Los números 46 y 96 tienen una curiosa propiedad su producto no se
+        altera aunque las cifras que lo integran cambien de lugar:
+        <br />
+        46 x 96 = 4416 <br />
+        64 x 69 = 4416 <br />
+        Confeccione un programa para imprimir todos los números de dos cifras
+        que cumplen con esta propiedad.
+      </p>
+      <div class="tc">
+        <button
+          type="button"
+          class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Resolver
+        </button>
+      </div>
+    </article>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Ejercicio 1</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- boton calcular -->
+            <button
+              id="calcular"
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+            >
+              Mostrar números
+            </button>
+            <br />
+            <!-- Para mostrar el resultado -->
+            <label for="resultado" class="f6 b db mb2"> Resultado: </label>
+            <br />
+            <p id="resultado" class="f4 lh-copy measure"></p>
+            <br />
+            <!-- boton limpiar campos -->
+            <button
+              id="limpiar"
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+            >
+              Limpiar Campos
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./index.ejercicio1.js"></script>
+  </body>
+</html>

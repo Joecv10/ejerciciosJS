@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios Otros</title>
+    <link
+      rel="stylesheet"
+      href="../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../../node_modules/tachyons/css/tachyons.min.css"
+    />
+    <link rel="stylesheet" href="./ejercicio3.style.css" />
+  </head>
+  <body>
+    <header class="pv3 ph2 relative bb">
+      <div id="container" class="flex justify-between items-center">
+        <div id="logo" class="overflow-hidden">
+          <a href="../../index.otros.html" class="link color-inherit"
+            >Lista de Ejercicios</a
+          >
+        </div>
+
+        <nav id="main-nav" class="dn db-l">
+          <a
+            href="../programaVoz/ejercicio1.html"
+            class="link dib-l pa2 pv2 color-inherit"
+            >Programa de Voz</a
+          >
+          <a
+            href="../cadenas/ejercicio2.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Cadenas</a
+          >
+          <a
+            href="../libreriaRandom/ejercicio3.html"
+            class="link db dib-l pa2 pv2 white bg-dark-gray"
+            >Libreria Random</a
+          >
+          <a
+            href="../codigoMorse/ejercicio4.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Código Morse</a
+          >
+          <a
+            href="../tiendaViveres/ejercicio5.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Tienda Víveres
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Card -->
+    <article class="mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+      <div class="tc">
+        <img
+          src="../../../../../assets/img/ejerciciosOtros/game.jpeg"
+          class="br-100 h3 w3 dib"
+          title="raices"
+        />
+        <h1 class="f4">Ejercicio 3</h1>
+        <hr class="mw3 bb bw1 b--black-10" />
+      </div>
+      <p class="lh-copy measure center f6 black-70">
+        Realizar un programa que utilice la librería random. (para realizar una
+        ruleta de números aleatorios, colores o países) y realizar un juego.
+      </p>
+      <div class="tc">
+        <button
+          type="button"
+          class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Resolver
+        </button>
+      </div>
+    </article>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Ejercicio 3</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Container explicacion del juego -->
+            <div class="ph3 ph4-ns pv6 bt b--black-10 black-70">
+              <a href="mailto:" class="link b f3 f2-ns dim black-70 lh-solid"
+                >Ruleta de la fortuna</a
+              >
+              <p class="f6 db b ttu lh-solid">
+                Si la ruleta cae en un número primo, te diré una fortuna
+              </p>
+            </div>
+            <!-- Container de la ruleta  -->
+            <div class="roulette-container">
+              <div class="banner" id="win-banner">
+                <h2>¡Felicidades, has ganado!</h2>
+                <p id="fortune-message"></p>
+              </div>
+              <div class="banner" id="lose-banner">
+                <h2>Inténtalo de nuevo</h2>
+              </div>
+              <div class="roulette">
+                <div id="number-display" class="number-display">0</div>
+              </div>
+              <button id="spin-button" class="button">Girar</button>
+              <button id="stop-button" class="button" disabled>Detener</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin Modal -->
+    <script src="../../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./index.ejercicio3.js"></script>
+  </body>
+</html>

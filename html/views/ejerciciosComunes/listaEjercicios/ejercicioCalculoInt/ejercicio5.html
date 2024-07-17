@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios JavaScript</title>
+    <link
+      rel="stylesheet"
+      href="../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../../node_modules/tachyons/css/tachyons.min.css"
+    />
+  </head>
+  <body>
+    <header class="pv3 ph2 relative bb">
+      <div id="container" class="flex justify-between items-center">
+        <div id="logo" class="overflow-hidden">
+          <a href="../../index.comunes.html" class="link color-inherit"
+            >Lista de Ejercicios</a
+          >
+        </div>
+
+        <nav id="main-nav" class="dn db-l">
+          <a
+            href="../ejercicioAnguloSol/ejercicio1.html"
+            class="link dib-l pa2 pv2 color-inherit"
+            >Ángulo Incidencia</a
+          >
+          <a
+            href="../ejercicioAreaTri/ejercicio2.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Área Triángulo</a
+          >
+          <a
+            href="../ejercicioLeerNum/ejercicio3.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Leer Número</a
+          >
+          <a
+            href="../ejercicioPagoTrab/ejercicio4.html"
+            class="link db dib-l pa2 pv2 color-inherit"
+            >Pago Trabajador</a
+          >
+          <a
+            href="../ejercicioCalculoInt/ejercicio5.html"
+            class="link db dib-l pa2 pv2 white bg-dark-gray"
+            >Calculo Interés</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Card -->
+    <article class="mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+      <div class="tc">
+        <img
+          src="../../../../../assets/img/ejerciciosComunes/interes.jpeg"
+          class="br-100 h3 w3 dib"
+          title="Poste de luz"
+        />
+        <h1 class="f4">Ejercicio 5</h1>
+        <hr class="mw3 bb bw1 b--black-10" />
+      </div>
+      <p class="lh-copy measure center f6 black-70">
+        Programa que calcula el capital final de un interés simple.
+      </p>
+      <div class="tc">
+        <button
+          type="button"
+          class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Resolver
+        </button>
+      </div>
+    </article>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Ejercicio 5</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Capital Inicial -->
+            <div class="measure">
+              <label for="capIni" class="f6 b db mb2">
+                Ingresar capital inicial
+              </label>
+              <input
+                id="capIni"
+                class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                type="text"
+                aria-describedby="capIni-desc"
+              />
+              <small id="capIni-desc" class="f6 black-60 db mb2">
+                Solo se acepta números reales positivos en este campo.
+              </small>
+            </div>
+            <!-- Tasa interes anual -->
+            <div class="measure">
+              <label for="interes" class="f6 b db mb2">
+                Ingresar tasa de interés anual
+              </label>
+              <input
+                id="interes"
+                class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                type="text"
+                aria-describedby="interes-desc"
+              />
+              <small id="interes-desc" class="f6 black-60 db mb2">
+                Solo se acepta números reales positivos en este campo.
+              </small>
+            </div>
+            <!-- Tiempo en años -->
+            <div class="measure">
+              <label for="anios" class="f6 b db mb2">
+                Ingresar tiempo en años
+              </label>
+              <input
+                id="anios"
+                class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                type="number"
+                aria-describedby="anios-desc"
+                step="1"
+                min="1"
+              />
+              <small id="anios-desc" class="f6 black-60 db mb2">
+                Solo se acepta números naturales en este campo.
+              </small>
+            </div>
+            <!-- boton calcular -->
+            <button
+              id="calcular"
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+            >
+              Calcular interés
+            </button>
+            <br />
+            <!-- Para mostrar el resultado -->
+            <label for="resultado" class="f6 b db mb2"> Resultado: </label>
+            <br />
+            <p id="resultado" class="f4 lh-copy measure"></p>
+            <br />
+            <!-- boton limpiar campos -->
+            <button
+              id="limpiarCampos"
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+            >
+              Limpiar Campos
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin Modal -->
+    <script src="../../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./index.ejercicio5.js"></script>
+  </body>
+</html>
